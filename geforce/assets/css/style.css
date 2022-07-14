@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@font-face {font-family: "GeForce";
+    src: url("../font/geforce.eot"); /* IE9*/
+    src: url("../font/geforce-iefix.eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("../font/geforce.woff2") format("woff2"), /* chrome firefox */
+    url("../font/geforce.woff") format("woff"), /* chrome firefox */
+    url("../font/geforce.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("../font/geforce.svg") format("svg"); /* iOS 4.1- */
+}
+:root{
+    --nv-color:#76b900;
+}
+
+a{
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+html, body{
+    margin:0;
+    padding: 0;
+    width: 100%;
+}
+body{
+    background: #000;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container-fluid{
+    height:546px;
+    display: flex;
+    justify-content: center;
+}
+#hero{
+    width: 1270px;
+    height:inherit;
+    display: inline-block;
+    background: url("../images/hero.webp");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0;
+    align-items: center;
+    justify-items: center;
+    transition: all 0.2s linear;
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+h1{
+    font: 2.6em 'GeForce';
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    transition: all 0.2s linear;
+}
+h2{
+    font: 2em 'GeForce';
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+h3{
+    font: 1.5em 'GeForce';
+    color: var(--nv-color);
+    padding: 0;
+    margin: 0;
+    transition: all 0.2s linear;
+}
+#hero-helper{
+    grid-row: 1;
+    grid-column: 2/6;
+    transition: all 0.2s linear;
+}
+#hero-info{
+    color: #eee;
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+#hero-sub-info{
+    font-size: 0.75em;
+    line-height: 1.25em;
+}
+.clear-30{
+    clear: both;
+    height: 60px;
+}
+.clear-30y{
+    clear: both;
+    height: 30px;
+}
+#wrapper{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+#container{
+    width: 1270px;
+    text-align: center;
+}
+.grid-x2{
+    width: 100%;
+    white-space: none;
+    vertical-align: top;
+}
+.grid-item-x2{
+    vertical-align: top;
+    width: 410px;
+    display: inline-block;
+    position: relative;
+    font-size: 13px;
+    white-space: none;
+    margin-bottom: 30px;
+}
+.grid-item-x2 span{
+    color: #CCC;
+}
+.grid-item-x2:nth-child(2){
+    margin-bottom: 30px;
+}
+.play-icon{
+    transition: all 0.2s linear;
+    position: absolute;
+   
+    background: url("../images/videos/play-icon.png");
+    background-size: 100%;
+    top: 35%; 
+    left: 50%; 
+    width: 72px;
+    height: 72px;
+    transform: translate(-50%, -50%);
+}
+.grid-item-x2:hover > .play-icon{
+    opacity: 0.63;
+}
+.grid-item-x2.m{
+   margin-right: 30px;
+  
+}
+.col-60{
+    display: inline-block;
+    text-align: center;
+    width: 66.6%;
+}
+.break-line{
+    border-color: #666;;
+}
+.ftmem{
+    text-align: center;
+}
+.ftxt{
+    display: inline-block;
+    color: #666;;  
+    font-size: 0.8em;
+    text-align: left;
+    width: 66.6%;
+}
+.pitem{
+    width: 310px;
+    display: inline-block;
+}
+.pitem img{
+    border-radius: 3px;
+}
+.pitem h4{
+    font: 1.2em 'GeForce';
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.pitem button{
+    background: #76b900;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font: 1em 'GeForce';
+    transition: all 0.2s linear;
+}
+.pitem:hover button{
+    background: #528003;
+   cursor: pointer;
+}
+.shopping-widget{
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 1270px) {
+    #container-fluid{
+        height: 387px;
+    }
+    #hero{
+        width: 100%;
+    }
+    h1{
+        font: 1.8em 'GeForce';
+    }
+    h3{
+        font: 1em 'GeForce';
+    }
+    #hero-info{
+        font-size: 0.7em;
+        line-height: 1.5em;
+    }
+    #hero-sub-info{
+        font-size: 0.6em;
+        line-height: 1.25em;
+    }
+    .clear-30{
+        height: 30px;
+    }
+    #wrapper{
+        margin-top: 50px;
+    }
+    #container{
+        width: 100%;
+    }
+    
+}
+@media (max-width: 880px) {
+    #hero{
+        background: url("../images/hero-md.webp") center no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+    #hero-helper{
+        text-align: center;
+        margin-top: 400px;
+        grid-row: 1;
+        grid-column:12/2;
+    }
+    #wrapper{
+        margin-top: 342px;
+    }
+    #container{
+        width: 100%;
+    }
+    
+}

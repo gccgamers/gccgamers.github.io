@@ -124,7 +124,7 @@ h3{
     transition: all 0.2s linear;
     position: absolute;
    
-    background: url("../images/videos/play-icon.png");
+    background: url("../images/videos/play-icon.webp");
     background-size: 100%;
     top: 35%; 
     left: 50%; 

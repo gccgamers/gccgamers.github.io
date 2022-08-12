@@ -1,0 +1,272 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://gccgamers.github.io/statics/icofont/icofont.min.css">
+<link rel="stylesheet" type="text/css" media="all"
+    href="https://gccgamers.com/static/version1660019920/frontend/Gamers/Default/en_US/font/fontawesome/css/font-awesome.min.css" />
+<style>
+    :root {
+        --brand-color: #e06e38;
+    }
+
+    body {
+        /* DEBUG ONLY */
+        background-color: #fff;
+        padding-top: 90px;
+    }
+
+    .page_container {
+        /* DEBUG ONLY */
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .page-clear {
+        clear: both;
+        height: 10px;
+    }
+
+    .page-tab-header>div {
+        cursor: pointer;
+    }
+
+
+    .page-tab-view,
+    .page-tab {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+
+    .page-tab-view>div {
+        padding: 10px 10px 10px 0;
+        animation: fttv_anim 0.27s ease;
+    }
+
+    @keyframes fttv_anim {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .page-tab-view>div:not(.page-tabview-active) {
+        display: none;
+
+    }
+
+    .page-tab-view>div i {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 4px;
+        width: 18px;
+    }
+
+    .page-tab-view>div span {
+        display: inline-block;
+    }
+
+    .pg-block {
+        background: #ececec;
+        text-align: center;
+    }
+
+    .page-action {
+
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+
+    .page-action,
+    .page-action li {
+        list-style: none;
+    }
+
+    .pg-padding {
+        padding: 18px;
+    }
+
+    .page-action li {
+        padding: 0;
+        margin: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .pa-phone a,
+    .pa-whatsapp a,
+    .pa-email a {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+        opacity: 0.8;
+    }
+
+    .pa-email a {
+        width: 100%;
+    }
+
+    .page-action li a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #888;
+    }
+
+    .page-action li a i {
+        font-size: 20px;
+    }
+
+
+    .page-tab-active .pg-block {
+        background: var(--brand-color) !important;
+        color: #FFF !important;
+    }
+
+    .pa-phone a {
+        background: rgba(0, 0, 0, 0.08);
+    }
+
+    .pa-whatsapp a {
+        background: rgba(0, 0, 0, 0.13);
+    }
+
+    .pa-email a {
+        background: #000000;
+        color: #d6d6d6;
+    }
+
+
+    .page-tab-active .pa-phone a,
+    .pa-phone a:hover {
+        background: #ffd8c5;
+        color: #a4481a;
+        opacity: 1;
+    }
+
+    .page-tab-active .pa-whatsapp a,
+    .pa-whatsapp a:hover {
+        background: #1EBEA5;
+        color: #fff;
+        opacity: 1;
+    }
+
+    .page-tab-active .pa-email a,
+    .pa-email a:hover {
+        background: #000000;
+        color: #d6d6d6;
+        opacity: 1;
+    }
+</style>
+
+<div class="container page_container">
+    <div class="page-tab">
+        <div class="page-tab-header row">
+            <div class="col-lg-4 col-md-4 col-xs-12 page-tab-active" data-tab="dubai">
+                <div class="pg-block">
+                    <div class="pg-padding">
+                        <b>GRAND LINK GATE COMPUTERS LLC</b><br />
+                        Office #114, Computer Plaza<br />
+                        Near Al Fahidi Metro Station<br />
+                        Bur Dubai, Dubai - UAE.
+                    </div>
+                    <ul class="page-action">
+                        <li class="pa-phone"><a href="tel:+97142233848"><i class="icofont-phone"
+                                    aria-hidden="true"></i><br /><span>+971
+                                    4
+                                    22 33 8 48</span></a></li>
+                        <li class="pa-whatsapp"><a target="_blank" href="https://wa.me/971526236233"><i
+                                    class="icofont-brand-whatsapp" aria-hidden="true"></i><br /><span>+971 52 623
+                                    6233</span></a></li>
+                        <li class="pa-email"><a target="_blank" href="mailto:sales@gccgamers.com"><i
+                                    class="icofont-envelope"
+                                    aria-hidden="true"></i><br /><span>sales@gccgamers.com</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12" data-tab="abudhabi">
+                <div class="pg-block">
+                    <div class="pg-block">
+                        <div class="pg-padding">
+                            <b>GCC GAMERS</b><br />
+                            F133, Bawadi Mall<br />
+                            Zayed Bin Sultan Street<br />
+                            Al Ain, Abu Dhabi - UAE.
+                        </div>
+                        <ul class="page-action">
+                            <li class="pa-phone"><a href="tel:+97137675401"><i class="icofont-phone"
+                                        aria-hidden="true"></i><br /><span>+971 3 76 75 4
+                                        01</span></a></li>
+                            <li class="pa-whatsapp"><a target="_blank" href="https://wa.me/971554384412"><i
+                                        class="icofont-brand-whatsapp" aria-hidden="true"></i><br /><span>+971 55 438
+                                        4412</span></a></li>
+                            <li class="pa-email"><a target="_blank" href="mailto:sales@gccgamers.com"><i
+                                        class="icofont-envelope"
+                                        aria-hidden="true"></i><br /><span>alain@gccgamers.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12" data-tab="muscat">
+                <div class="pg-block">
+                    <div class="pg-padding">
+                        <b>GCC GAMERS</b><br />
+                        #114, Ruwi Plaza<br />Ruwi<br />
+                        Muscat, Oman
+                    </div>
+                    <ul class="page-action">
+                        <li class="pa-phone"><a href="tel:+96824706955"><i class="icofont-phone"
+                                    aria-hidden="true"></i><br /><span>+968 2470 69
+                                    55</span></a></li>
+                        <li class="pa-whatsapp"><a target="_blank" href="https://wa.me/96893949998"><i
+                                    class="icofont-brand-whatsapp" aria-hidden="true"></i><br /><span>+968 9394
+                                    9998</span></a></li>
+                        <li class="pa-email"><a target="_blank" href="mailto:sales@gccgamers.com"><i
+                                    class="icofont-envelope"
+                                    aria-hidden="true"></i><br /><span>oman@gccgamers.com</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-tab-view">
+            <div class="page-tabview-active" data-tab="dubai">
+                <iframe
+                    src="https://maps.google.com/maps?q=Grand%20Link%20Gate%20Computer%20LLC&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    width="100%" height="450" allowfullscreen="allowfullscreen" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            </div>
+            <div data-tab="abudhabi">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14561.324177483892!2d55.8071544!3d24.1601202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4ac9c55d5d9100a!2sGCC%20Gamers!5e0!3m2!1sen!2sin!4v1660158626681!5m2!1sen!2sin"
+                    width="100%" height="450" allowfullscreen="allowfullscreen" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+            </div>
+            <div data-tab="muscat">
+                <iframe style="border: 0;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3176928540847!2d58.5460151!3d23.592936699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeff4d34f40df8a9!2sGCC%20Gamers!5e0!3m2!1sen!2sae!4v1652652342993!5m2!1sen!2sae"
+                    width="100%" height="450" allowfullscreen="allowfullscreen" frameborder="0" marginwidth="0" marginheight="0" scrolling="no""></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.page-tab-header > div').forEach((element) => {
+        element.onclick = (e) => {
+            var tab = element.getAttribute('data-tab');
+            var view = element.parentElement.parentElement.parentElement.querySelector('.page-tab-view > div[data-tab="' + tab + '"]');
+            element.parentElement.querySelectorAll('.page-tab-header > div').forEach((e2) => {
+                e2.classList.remove('page-tab-active');
+            });
+            element.classList.add('page-tab-active');
+            element.parentElement.parentElement.parentElement.querySelectorAll('.page-tab-view > div').forEach((e2) => {
+                e2.classList.remove('page-tabview-active');
+            });
+            view.classList.add('page-tabview-active');
+        }
+    });
+</script>

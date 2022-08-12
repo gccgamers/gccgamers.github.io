@@ -1,0 +1,462 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://gccgamers.github.io/statics/icofont/icofont.min.css">
+<link rel="stylesheet" type="text/css" media="all"
+    href="https://gccgamers.com/static/version1660019920/frontend/Gamers/Default/en_US/font/fontawesome/css/font-awesome.min.css" />
+<style>
+    :root {
+        --brand-color: #e06e38;
+    }
+
+    body {
+        /* DEBUG ONLY */
+        background-color: #eaeaea;
+        padding-top: 90px;
+    }
+
+    .container {
+        /* DEBUG ONLY */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ft-cont {
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .ft-clear {
+        clear: both;
+        height: 10px;
+    }
+
+    .ft-tab-header>div {
+        float: left;
+        padding: 10px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-right: 2px;
+        background-image: linear-gradient(rgba(36, 9, 5, 0.054), transparent);
+        box-shadow: inset 0 0 3px rgba(36, 9, 5, 0.036);
+        border-bottom: none;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.54);
+        transition: all 0.036s linear;
+    }
+
+    .ft-tab-header>div:last-child {
+        margin-right: 0;
+    }
+
+    .ft-tab-header>div:hover {
+        background-image: linear-gradient(rgba(224, 110, 56, 0.36), transparent) !important;
+        box-shadow: inset 0 0 3px rgba(36, 9, 5, 0.036);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.18)
+    }
+
+    .ft-tab-active {
+        font-weight: bold;
+        background-image: linear-gradient(rgba(224, 110, 56, 0.36), transparent) !important;
+        box-shadow: inset 0 0 3px rgba(36, 9, 5, 0.036);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.18);
+        color: rgba(0, 0, 0, 0.63) !important;
+    }
+
+    .ft-tab-view,
+    .ft-tab {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+
+    .ft-tab-view>div {
+        padding: 10px 10px 10px 0;
+        animation: fttv_anim 0.27s ease;
+    }
+
+    @keyframes fttv_anim {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .ft-tab-view>div:not(.ft-tabview-active) {
+        display: none;
+
+    }
+
+    .ft-tab-view>div i {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 4px;
+        width: 18px;
+    }
+
+    .ft-tab-view>div span {
+        display: inline-block;
+    }
+
+    .ft-heading h3 {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .ft-heading ul,
+    .ft-heading ul li {
+        list-style: none !important;
+        padding: 0;
+        margin: 0;
+        vertical-align: top;
+    }
+
+    .ft-heading ul.bullet li {
+        height: 22px;
+    }
+
+    .ft-heading ul.bullet li a {
+        float: left;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        font-size: 13px;
+        transition: all 0.18s linear;
+    }
+
+    .ft-heading ul.bullet li a:hover {
+        color: var(--brand-color);
+    }
+
+    .ft-heading ul.bullet li a:hover::after {
+        transform: translateX(4px);
+    }
+
+    .ft-heading ul.bullet li a::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: "IcoFont";
+        content: "\ea98";
+        transition: all 0.18s linear;
+    }
+
+    .ft-heading ul.bullet li a::before {
+        content: "\00a0 \00a0 \00a0 \00a0 \00a0 ";
+    }
+
+    .ft-next-row {
+        margin-top: 20px;
+    }
+
+    .ft-heading .social-link {
+        float: left;
+        text-align: center;
+        width: 30px;
+        margin-right: 5px;
+        font-size: 15px;
+        color: #fff;
+        border-radius: 50px;
+        height: 30px;
+        padding-top: 7px;
+        transition: all 0.18s linear;
+    }
+
+    .ft-heading .social-link:hover {
+        scale: 0.72;
+    }
+
+    .ft-heading .hidden {
+        display: none;
+    }
+
+    .ft-break {
+        height: 41px;
+        position: relative;
+    }
+
+    .ft-break:after {
+        position: absolute;
+        left: 0;
+        top: 20px;
+        width: 100%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.081);
+        content: "";
+    }
+    .ft-copyright{
+        font-size: 12px;
+        font-weight: 700;
+        opacity: 0.72;
+    }
+    .ft-dim{
+        color: rgba(0, 0, 0, 0.36);
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+    .ft-dim i{
+        font-size: 18px;
+        margin: 0 4px;
+    }
+</style>
+
+<div class="ft-cont container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-xs-12 align-self-start">
+            <a class="ft-logo" href="https://gccgamers.com" title="GCC Gamers">
+                <img width="100%" style="max-width: 270px;" src="https://gccgamers.github.io/statics/logo.webp" />
+            </a>
+
+            <div class="ft-clear"></div>
+            <p class="ft-about">
+                Focusing on providing all gaming and graphics products with the modifications that push the limits of
+                what is thought possible.<br />
+                As always, we focus on fulfilling our slogan: <b>“The Largest Selection of Gaming PC Builders”</b>.
+            </p>
+
+            <div class="ft-tab">
+                <div class="ft-tab-header">
+                    <div class="ft-tab-active" data-tab="dubai">
+                        <span>Dubai</span>
+                    </div>
+                    <div data-tab="abudhabi">
+                        <span>Abu Dhabi</span>
+                    </div>
+                    <div data-tab="muscat">
+                        <span>Muscat</span>
+                    </div>
+                </div>
+                <div class="ft-tab-view">
+                    <div class="ft-tabview-active" data-tab="dubai">
+                        <b>GRAND LINK GATE COMPUTERS LLC</b><br />
+                        <i class="icofont-location-pin" aria-hidden="true"></i> <span>Office #114, Computer Plaza<br />
+                            Near Al Fahidi Metro Station<br />
+                            Bur Dubai, Dubai - UAE.</span><br />
+                        <i class="icofont-phone" aria-hidden="true"></i> <span><a href="tel:+97142233848">+971 4
+                                22 33 8 48</a></span><br />
+                        <i class="icofont-brand-whatsapp" aria-hidden="true"></i> <span><a target="_blank"
+                                href="https://wa.me/971526236233">+971 52 623 6233</a></span><br />
+                        <i class="icofont-envelope" aria-hidden="true"></i> <span><a target="_blank"
+                                href="mailto:sales@gccgamers.com">sales@gccgamers.com</a></span>
+                    </div>
+                    <div data-tab="abudhabi">
+                        <b>GCC GAMERS</b><br />
+                        <i class="icofont-location-pin" aria-hidden="true"></i> <span>F133, Bawadi Mall<br />
+                            Zayed Bin Sultan Street<br />
+                            Al Ain, Abu Dhabi - UAE. </span><br />
+                        <i class="icofont-phone" aria-hidden="true"></i> <span><a href="tel:+97137675401">+971 3 76 75 4
+                                01</a></span><br />
+                        <i class="icofont-brand-whatsapp" aria-hidden="true"></i> <span><a target="_blank"
+                                href="https://wa.me/971554384412">+971 55 438 4412</a></span><br />
+                        <i class="icofont-envelope" aria-hidden="true"></i> <span><a target="_blank"
+                                href="mailto:alain@gccgamers.com">alain@gccgamers.com</a></span>
+                    </div>
+                    <div data-tab="muscat">
+                        <b>GCC GAMERS</b><br />
+                        <i class="icofont-location-pin" aria-hidden="true"></i> <span>#114, Ruwi Plaza<br />
+                            Muscat, Oman</span><br />
+                        <i class="icofont-phone" aria-hidden="true"></i> <span><a href="tel:+96824706955">+968 2470 69
+                                55</a></span><br />
+                        <i class="icofont-brand-whatsapp" aria-hidden="true"></i> <span><a target="_blank"
+                                href="https://wa.me/96893949998">+968 9394 9998</a></span><br />
+                        <i class="icofont-envelope" aria-hidden="true"></i> <span><a target="_blank"
+                                href="mailto:oman@gccgamers.com">oman@gccgamers.com</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ft-heading collapsible mobile-collapsible">
+                        <h3 class="block-title heading">Company</h3>
+                        <div class="block-content block-content-statick toggle-content">
+                            <ul class="bullet">
+                                <li><a href="https://www.gccgamers.com/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="https://www.gccgamers.com/warranties">Warranties</a></li>
+                                <li><a href="https://www.gccgamers.com/terms-condition">Terms &amp; Condition</a></li>
+                                <li><a href="https://www.gccgamers.com/shipping-delivery">Shipping &amp; Delivery</a>
+                                </li>
+                                <li><a href="https://www.gccgamers.com/refund-policy">Return &amp; Refund policy</a>
+                                </li>
+                                <li><a title="Advertise With Us" href="/advertise-with-us">Advertise With Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ft-heading collapsible mobile-collapsible">
+                        <h3 class="block-title heading">My Account</h3>
+                        <div class="block-content block-content-statick toggle-content">
+                            <ul class="bullet">
+                                <li><a href="https://www.gccgamers.com/customer/account/">My Account</a></li>
+                                <li><a href="https://www.gccgamers.com/wishlist/">My Wishlist</a></li>
+                                <li><a href="https://www.gccgamers.com/checkout/cart/index">My Cart</a></li>
+                                <li><a href="https://www.gccgamers.com/checkout/">Checkout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ft-heading collapsible mobile-collapsible">
+                        <h3 class="block-title heading">Gaming PCs</h3>
+                        <div class="block-content block-content-statick toggle-content">
+                            <ul class="bullet">
+                                <li><a href="https://gccgamers.com/sale-off.html/5000t-gaming-pc-core-i9-12900-32-gb-ram-ddr5-rtx-3080-10-gb.html"
+                                        target="_blank" rel="noopener">5000T Gaming PC</a></li>
+                                <li><a
+                                        href="https://gccgamers.com/ultimate-gaming-pc-core-i9-12900k-64-gb-ram-rtx-3090-ti-24-gb.html">Ultimate
+                                        Gaming PC</a></li>
+                                <li><a
+                                        href="https://gccgamers.com/sale-off.html/ivory-gaming-pc-core-i7-12700-16-gb-ram-rtx-3070-ti-8-gb.html">Ivory
+                                        Gaming PC</a></li>
+                                <li><a href="https://gccgamers.com/sale-off.html/rtx-3050-gaming-pc-core-i5-12400-16-gb-ram-rtx-3050-8-gb.html"
+                                        target="_blank" rel="noopener">RTX 3050 Gaming PC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ft-next-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ft-heading collapsible mobile-collapsible">
+                        <h3 class="block-title heading">Support</h3>
+                        <div class="block-content block-content-statick toggle-content">
+                            <ul class="bullet">
+                                <li><a href="https://www.gccgamers.com/about-store">About Us</a></li>
+                                <li><a href="https://www.gccgamers.com/contact/">Contact Us</a></li>
+                                <li><a href="https://www.gccgamers.com/careers">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ft-heading collapsible mobile-collapsible">
+                        <h3 class="block-title heading">Hot Products</h3>
+                        <div class="block-content block-content-statick toggle-content">
+                            <ul class="bullet">
+                                <li><a href="https://gccgamers.com/msi-optix-g27c4-curved-27-inch-165hz-1ms-gaming-monitor-9s6-3ca91t-008.html"
+                                        target="_blank" rel="noopener">MSI Optix G27C4</a></li>
+                                <li><a href="https://gccgamers.com/redragon-rgps-gc-ps007-850w-80plus-gold-rgb-fully-modular-psu-ps007.html"
+                                        target="_blank" rel="noopener">Redragon GC-PS007</a></li>
+                                <li><a href="https://gccgamers.com/sale-off.html/dragon-gaming-bundle-predator-gaming-pc-msi-g24c4-gaming-monitor-redragon-gaming-keyboard-mouse-headset.html"
+                                        target="_blank" rel="noopener">Dragon Gaming Bundle</a></li>
+                                <li><a href="https://gccgamers.com/redragon-k552-rgb-ba-mechanical-gaming-keyboard-and-mouse-combo-k552-rgb-ba.html"
+                                        target="_blank" rel="noopener">Redragon K552-RGB-BA</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ft-heading collapsible mobile-collapsible">
+                        <h3 class="block-title heading">Gaming Laptops</h3>
+                        <div class="block-content block-content-statick toggle-content">
+                            <ul class="bullet">
+                                <li><a
+                                        href="https://gccgamers.com/gaming-vr.html/asus-rog-strix-g15-advantage-edition-g513-amd-ryzen-r9-5900hx-3-3ghz-cpu-16gb-ram-1tb-ssd-rx6800m-12gb-gddr6-gpu-15-6-fhd-300hz-display-win10-g513qy-hf002t.html">Asus
+                                        ROG G15 Laptop</a></li>
+                                <li><a
+                                        href="https://gccgamers.com/gaming-vr.html/msi-vector-gp66-12uh-intel-core-i7-12700h-3-50ghz-32gb-ram-1tb-ssd-rtx-3080-8gb-gpu-15-6-qhd-165hz-wireless-bluetooth-camera-win11-home-9s7-154422-003.html">MSI
+                                        Vector GP66 Laptop</a></li>
+                                <li><a
+                                        href="https://gccgamers.com/gaming-vr.html/asus-zephyus-m16-intel-core-i7-11800h-2-3-ghz-16-gb-ddr4-ram-1tb-ssd-16-0-wqxga-165hz-display-6gb-rtx-3060-gpu-bt-cam-win10-gu603hm-k8059t.html">Asus
+                                        Zephyus M16 Laptop</a></li>
+                                <li><a
+                                        href="https://gccgamers.com/gaming-vr.html/dell-alienware-x17-r1core-i9-11980hk-3-3-ghz-32gb-ram-1tb-ssd-17-3-fhd-360hz-screen-rtx3080-gpu-bt-cam-win10-home.html">Dell
+                                        Alienware X17 Laptop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3  col-xs-12">
+            <div class="collapsible mobile-collapsible">
+                <div class="ft-heading collapsible mobile-collapsible">
+                    <h3 class="block-title heading">Newsletter</h3>
+                    <div class="block-content block-content-statick toggle-content">
+                        <div class="block-newletter">{{block class="Magento\Newsletter\Block\Subscribe"
+                            template="subscribe.phtml"}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible mobile-collapsible ft-next-row">
+                <div class="ft-heading collapsible mobile-collapsible">
+                    <h3 class="block-title heading">Let's Socialize</h3>
+                    <div class="block-content block-content-statick toggle-content">
+                        <ul class="list-inline toggle-content">
+                            <li><a style="background-color: #415a99;" class="social-link"
+                                    href="https://www.facebook.com/gccgamers.uae/" target="_blank" rel="noopener"><em
+                                        class="fa fa-facebook"><span class="hidden">facebook</span></em></a></li>
+                            <li><a style="background-color: #cb222a;" class="social-link"
+                                    href="https://www.instagram.com/gccgamers/" target="_blank" rel="noopener"><em
+                                        class="fa fa-instagram"><span class="hidden">Instagram</span></em></a>
+                            </li>
+                            <li><a style="background-color: #00caff;" class="social-link"
+                                    href="https://twitter.com/GamersGcc/" target="_blank" rel="noopener"><em
+                                        class="fa fa-twitter"><span class="hidden">twitter</span></em></a></li>
+                            <li><a style="background-color: #ff0000;" class="social-link"
+                                    href="https://www.youtube.com/channel/UCpBJSZRezs2SAEeV6Cj12yg" target="_blank"
+                                    rel="noopener"><em class="fa fa-youtube"><span
+                                            class="hidden">youtube</span></em></a></li>
+                            <li><a style="background-color: #cb222a;" class="social-link"
+                                    href="https://www.pinterest.com/gccgamers/" target="_blank" rel="noopener"><em
+                                        class="fa fa-pinterest-p"><span class="hidden">pinterest</span></em></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br /><br />
+                    <iframe title="GCC Gamers Youtube"
+                        src="https://www.youtube.com/embed/cRdl8ZU9qSk?controls=0&amp;autoplay=1&amp;mute=1&amp;loop=1"
+                        width="auto" height="auto" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-break"></div>
+
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <div class="pull-left">
+                <div class="pull-left ft-copyright">COPYRIGHT &copy; GCC GAMERS 2022, All RIGHTS RESERVED.</div>
+            </div>
+            <div class="col-lg-12 col-xs-12">
+                <div class="pull-right ft-dim">
+                    <b>WE ACCEPT</b> <i class="icofont-vehicle-delivery-van"></i> CASH ON DELIVERY <i class="icofont-credit-card"></i> DEBIT / CREDIT CARD PAYMENTS <i class="icofont-bank-alt"></i> BANK TRANSFER
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+</div>
+
+<script>
+    document.querySelectorAll('.ft-tab-header > div').forEach((element) => {
+        element.onclick = (e) => {
+            var tab = element.getAttribute('data-tab');
+            var view = element.parentElement.parentElement.parentElement.querySelector('.ft-tab-view > div[data-tab="' + tab + '"]');
+            element.parentElement.querySelectorAll('.ft-tab-header > div').forEach((e2) => {
+                e2.classList.remove('ft-tab-active');
+            });
+            element.classList.add('ft-tab-active');
+            element.parentElement.parentElement.parentElement.querySelectorAll('.ft-tab-view > div').forEach((e2) => {
+                e2.classList.remove('ft-tabview-active');
+            });
+            view.classList.add('ft-tabview-active');
+        }
+    });
+</script>
